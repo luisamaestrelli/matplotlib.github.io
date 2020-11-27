@@ -1,3 +1,5 @@
 # MatPlotLib
 ### O que é? 
-### Qual sua função?
+É uma biblioteca com recursos para a geração de gráficos 2D a partir de um arranjo. São gráficos comuns que podem ser criados com comandos simples, inpirados nos comandos gráficos do MATLAB
+### Instalação
+### Pacote PyPlot
