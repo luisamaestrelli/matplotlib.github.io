@@ -34,11 +34,12 @@ As funções disponíveis no pacote ```matplotlib.pyplot``` fazem com que o ``ma
 O ``pyplot`` já tem uma figura e uma área de desenho padrão, ou seja, que não precisa de uma definição prévia. Assim o código para gerar um gráfico pode ser apenas
 ```
 import matplotlib.pyplot as plt
-plt.plot( [10,5,3,4,6,8] )
+plt.plot( [10,5,3,4,6,8] ) #Se você da apenas uma lista ou arranjo para o plot, o matplotlib assume que é uma sequência de valores de y e automaticamente gera valores de x 
 plt.title("Muito Fácil")
 plt.show()
-
 ```
+
+
 
     
     
