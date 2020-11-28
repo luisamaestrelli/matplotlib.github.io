@@ -51,6 +51,5 @@ Exemplo: o mesmo plot com círculos amarelos
 plt.plot([2, 4, 6, 8], [2, 6, 9, 16], 'yo')
 ```
 
-![imagem teste](https://github.com/luisamaestrelli/matplotlib.github.io/blob/main/POST%20-%20FINAL.jpg)
-
+[[https://github.com/luisamaestrelli/matplotlib.github.io/blob/main/POST%20-%20FINAL.jpg]]
 
