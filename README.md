@@ -39,7 +39,8 @@ plt.title("Muito Fácil")
 plt.show()
 ```
 
-*imagem*
+<img src="grafico q.png" alt="grafico 1" title="Avatar " />
+
 
 ``plot`` é um método versátil, ele aceita vários números arbitrários como argumento, por exemplo o usuário quiser plotar x por y:
 ```
@@ -57,6 +58,6 @@ plt.plot([2, 4, 6, 8], [2, 6, 9, 16], 'yo')
 *imagem*
 
 
-Como listas são muito limitantes, geralmente é usado `` <a href="https://numpy.org/">numpy</a> `` arrays. Na verdade todas as sequências são convertidas para ``numpy`` internamente. No exemplo abaixo
+Como listas são muito limitantes, geralmente é usado ``<a href="https://numpy.org/">numpy</a>`` arrays. Na verdade todas as sequências são convertidas para ``numpy`` internamente. No exemplo abaixo
 
 
