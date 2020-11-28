@@ -4,8 +4,8 @@
 ### Como funciona
 <ul>
   <li><strong>pylab</strong></li>
-<li></li>
-<li>Item 3</li>
+  <li><strong>frontend</strong> ou <strong>API</strong></li>
+  <li><strong>backends</strong></li>
 </ul>
 ### Pacote PyPlot
 O pacote matplotlib.pyplot
