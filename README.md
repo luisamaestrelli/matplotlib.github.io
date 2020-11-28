@@ -45,9 +45,9 @@ plt.plot([2, 4, 6, 8], [2, 6, 9, 16])
 ```
 
 <h5>Formatando o estilo do seu plot</h5>
-Para todo par de argumento, x e y, tem um terceiro argumento opcional do tipo string que indica o tipo e a cor da linha do plot. As letras e os símbolos da string são do MATLAB e você liga uma string de cor com uma string do tipo da linha. Como visto acima o formato de string default é ``b-`` que é uma linha azul sólida.
+Para todo par de argumento, x e y, tem um terceiro argumento opcional do tipo string que indica o tipo e a cor da linha do plot. As letras e os símbolos da string são do MATLAB e você liga uma string de cor com uma string do tipo da linha. Como visto acima o formato de string default é ```b-``` que é uma linha azul sólida.
 Exemplo: o mesmo plot com círculos amarelos
-``
+```
 plt.plot([2, 4, 6, 8], [2, 6, 9, 16], 'yo')
-``
+```
 
