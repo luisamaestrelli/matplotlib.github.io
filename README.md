@@ -39,12 +39,12 @@ plt.title("Muito Fácil")
 plt.show()
 ```
 
-``plot`` é um método versátil, ele aceita vários números arbitrários como argumento, por exemplo o usuário quiser plotar x por y:
+``plot`` é um método versátil, ele aceita vários números arbitrários como argumento, por exemplo se o usuário quiser plotar x por y:
 ```
 plt.plot([2, 4, 6, 8], [2, 6, 9, 16])
 ```
 
-<h5>Formatando o estilo do seu plot</h5>
+<h4>Formatando o estilo do seu plot</h4>
 Para todo par de argumento, x e y, tem um terceiro argumento opcional do tipo string que indica o tipo e a cor da linha do plot. As letras e os símbolos da string são do MATLAB e você liga uma string de cor com uma string do tipo da linha. Como visto acima o formato de string default é ```b-``` que é uma linha azul sólida.
 Exemplo: o mesmo plot com círculos amarelos
 ```
