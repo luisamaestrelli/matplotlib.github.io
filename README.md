@@ -7,5 +7,6 @@
   <li><strong>frontend</strong> ou <strong>API</strong></li>
   <li><strong>backends</strong></li>
 </ul>
+
 ### Pacote PyPlot
 O pacote matplotlib.pyplot
