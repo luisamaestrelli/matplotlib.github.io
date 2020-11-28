@@ -21,4 +21,5 @@ O funcionamento do ```matplotlib``` pode ser explicado em 3 partes
  Para usar o ``matplotlib`` é recomendado o uso da <a href="https://www.anaconda.com/">Anaconda</a> e do <a href="https://www.activestate.com/products/python/downloads/">ActiveState</a> que funcionam para Windows, macOS e plataformas Linux. Ambos são distribuidores que incluem o ``matplotlib`` e várias outras ferramentas. Para mais informações e um passo a passo mais detalhados visitar o <a href="https://matplotlib.org/users/installing.html">Installation Guide</a>
 
 ### Pacote PyPlot
-O pacote ```matplotlib.pyplot``` tem um conjunto de funções que permite que você crie uma figura, desenhe linhas na área do gráfico, decore o gráfico com rótulos, entre outros. Cada função do ```pyplot``` algo na figura 
+As funções disponíveis no pacote ```matplotlib.pyplot``` fazem com que o ``matplotlib`` funcione como o MATLAB, sua principal função é tornar visível um determinado conjunto de dados. Cada função do ``pyplot`` muda algo na figura como
+    - 
