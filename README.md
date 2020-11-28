@@ -4,11 +4,11 @@
   
 ### Como funciona
 <ul>
-  <li><strong>pylab:</strong></li> 
+  <li><strong>pylab:</strong></li> Conjunto de funções disponível em ```matplotlib.pylab``` que permite a geração de código similar ao MATLAB.
   <li><strong>frontend</strong> ou <strong>API:</strong></li>
   <li><strong>backends:</strong></li>
 </ul>
 
 ### Pacote PyPlot
-O pacote ```matplotlib.pyplot``` tem um conjunto de funções que permite que você crie uma figura, desenhe linhas na área do gráfico, decore o gráfico com rótulos, entre outros. Cada função do ```pyplot``` algo na figura
+O pacote ```matplotlib.pyplot``` tem um conjunto de funções que permite que você crie uma figura, desenhe linhas na área do gráfico, decore o gráfico com rótulos, entre outros. Cada função do ```pyplot``` algo na figura 
 
