@@ -57,6 +57,6 @@ plt.plot([2, 4, 6, 8], [2, 6, 9, 16], 'yo')
 *imagem*
 
 
-Como listas são muito limitantes, geralmente é usado [`numpy`](https://numpy.org/) arrays. Na verdade todas as sequências são convertidas para ``numpy`` internamente. O exemplo a seguir mostra várias linhas com diferentes estilos um uma chamada de função usando arrays
+Como listas são muito limitantes, geralmente é usado [`numpy`](https://numpy.org/) arrays. Na verdade todas as sequências são convertidas para ``numpy`` internamente. O exemplo a seguir mostra várias linhas com diferentes estilos um uma chamada de função usando arrays 
 
 
