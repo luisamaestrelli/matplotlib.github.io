@@ -22,14 +22,14 @@ O funcionamento do ```matplotlib``` pode ser explicado em 3 partes
 
 ### Pacote PyPlot
 As funções disponíveis no pacote ```matplotlib.pyplot``` fazem com que o ``matplotlib`` funcione como o MATLAB, sua principal função é tornar visível um determinado conjunto de dados. Cada função do ``pyplot`` muda algo na figura como
-    - Plotando com strings de palavra-chave;
-    - Plotando com variáveis categóricas;
-    - Controlando propriedades de linha;
-    - Trabalhando com várias figuras e eixos;
-    - Trabalhando com texto;
-    - Usando expressões matemáticas em texto;
-    - Anotando texto;
-    - Eixos logarítmicos e outros eixos não lineares.
+   - Plotando com strings de palavra-chave;
+   - Plotando com variáveis categóricas;
+   - Controlando propriedades de linha;
+   - Trabalhando com várias figuras e eixos;
+   - Trabalhando com texto;
+   - Usando expressões matemáticas em texto;
+   - Anotando texto;
+   - Eixos logarítmicos e outros eixos não lineares.
     
 O ``pyplot`` já tem uma figura e uma área de desenho padrão, ou seja, que não precisa de uma definição prévia. Assim o código para gerar um gráfico pode ser apenas:
 ```
@@ -45,4 +45,5 @@ plt.plot([2, 4, 6, 8], [2, 6, 9, 16])
 ```
 
 <h5>Formatando o estilo do seu plot</h5>
+Para todo par de argumento, x e y, tem um terceiro argumento opcional do tipo string que indica o tipo e a cor da linha do plot
 
