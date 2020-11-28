@@ -38,8 +38,7 @@ plt.plot( [10,5,3,4,6,8] ) #Se você fornece apenas uma lista ou arranjo para o 
 plt.title("Muito Fácil")
 plt.show()
 ```
-
-*imagem*
+<img src="grafico q.png" alt= "grafico 1" title= "Avatar" />
 
 ``plot`` é um método versátil, ele aceita vários números arbitrários como argumento, por exemplo o usuário quiser plotar x por y:
 ```
