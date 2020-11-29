@@ -27,8 +27,8 @@ As funções disponíveis no pacote ```matplotlib.pyplot``` fazem com que o ``ma
    - Controlando propriedades de linha;
    - Trabalhando com várias figuras e eixos;
    - Trabalhando com texto;
-   - Usando expressões matemáticas em texto;
-   - Anotando texto;
+      - Usando expressões matemáticas em texto;
+      - Anotando texto;
    - Eixos logarítmicos e outros eixos não lineares.
     
 O ``pyplot`` já tem uma figura e uma área de desenho padrão, ou seja, que não precisa de uma definição prévia. Assim o código para gerar um gráfico pode ser apenas:
@@ -194,7 +194,7 @@ plt.show()
 
 *imagem8*
 
-Todas as funções de ``text`` retornam uma intância de ``matplotlib.text.Text`` 
+Todas as funções de ``text`` retornam uma instância de ``matplotlib.text.Text`` 
 
 
 
