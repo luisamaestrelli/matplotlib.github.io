@@ -45,7 +45,7 @@ plt.show()
 ```
 plt.plot([2, 4, 6, 8], [2, 6, 9, 16])
 ```
-*imagem2*
+![image](https://raw.githubusercontent.com/luisamaestrelli/matplotlib.github.io/main/grafico%202.png)
 
 <h6>Formatando o estilo do seu plot</h6>
 Para todo par de argumento, x e y, tem um terceiro argumento opcional do tipo string que indica o tipo e a cor da linha do plot. As letras e os símbolos da string são do MATLAB e você liga uma string de cor com uma string do tipo da linha. Como visto acima o formato de string default é ```b-``` que é uma linha azul sólida.
@@ -54,11 +54,11 @@ Exemplo: o mesmo plot com círculos amarelos
 plt.plot([2, 4, 6, 8], [2, 6, 9, 16], 'yo')
 ```
 
-<img  scr="grafico 3.png" alt="grafico 3" title title="coraçao" />
+![image](https://raw.githubusercontent.com/luisamaestrelli/matplotlib.github.io/main/grafico%203.png)
 
 A seguir estão as listas de estilos de linhas e os formatos de strings.
 
-<img scr="tabela 1.png" alt="tabela 1" title="tabela" />
+![image](https://raw.githubusercontent.com/luisamaestrelli/matplotlib.github.io/main/grafico%204.png)
 
 Como listas são muito limitantes, geralmente é usado [`numpy`](https://numpy.org/) arrays. Na verdade todas as sequências são convertidas para ``numpy`` internamente. O exemplo a seguir mostra várias linhas com diferentes estilos um uma chamada de função usando arrays 
 ```
@@ -72,7 +72,7 @@ plt.plot(t, t, 'y-', t, t**2, 'b--', t, t**3, 'cs')
 plt.show()
 ```
 
-<img scr="grafico 4"  alt="grafico 4" title="chave" />
+![image](https://raw.githubusercontent.com/luisamaestrelli/matplotlib.github.io/main/grafico%204.png)
 
 #### <a id="paragrafo3">Plotando com strings de palavra-chave</a>
 Existem circunstâncias em que o formato do data possibilita o acesso a determinadas variáveis com strings. Por exemplo com [`numpy.recarray`](https://numpy.org/doc/stable/reference/generated/numpy.recarray.html#numpy.recarray) ou [`pandas.DataFrame`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame)
@@ -91,7 +91,7 @@ plt.ylabel('entrada b')
 plt.show()
 ```
 
-<img scr="grafcio 5.png" alt="grafico 5" title="copo" />
+![image](https://raw.githubusercontent.com/luisamaestrelli/matplotlib.github.io/main/grafico%205.png)
 
 #### <a id="paragrafo4">Plotando com variáveis categóricas</a>
 Também podemos criar um plot com variáveis categóricas, o ``matplotlib`` possibilita você passá-las diretamente para várias funções de plotagem.
