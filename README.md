@@ -39,7 +39,7 @@ plt.title("inicial")
 plt.show()
 ```
 
-<img scr="grafico 1.png" alt="grafico 1" title="Avatar" />
+!(imagem 1)[https://github.com/luisamaestrelli/matplotlib.github.io/blob/main/grafico%201.png]
 
 
 ``plot`` é um método versátil, ele aceita vários números arbitrários como argumento, por exemplo o usuário quiser plotar x por y:
