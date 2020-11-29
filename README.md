@@ -72,7 +72,7 @@ plt.plot(t, t, 'y-', t, t**2, 'b--', t, t**3, 'cs')
 plt.show()
 ```
 
-![image](https://raw.githubusercontent.com/luisamaestrelli/matplotlib.github.io/main/grafico%204.png)
+![image](https://raw.githubusercontent.com/luisamaestrelli/matplotlib.github.io/main/tabelas%201.png)
 
 #### <a id="paragrafo3">Plotando com strings de palavra-chave</a>
 Existem circunstâncias em que o formato do data possibilita o acesso a determinadas variáveis com strings. Por exemplo com [`numpy.recarray`](https://numpy.org/doc/stable/reference/generated/numpy.recarray.html#numpy.recarray) ou [`pandas.DataFrame`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame)
@@ -111,7 +111,7 @@ plt.suptitle('Conhecendo PyPlot')
 plt.show()
 ```
 
-<img scr="grafico 6. png" alt="grafico 6" title="titulo" />
+![image](https://raw.githubusercontent.com/luisamaestrelli/matplotlib.github.io/main/grafico%206.png)
 
 ### <a id="paragrafo5">Controlando propriedades de linha</a>
 É possível atribuir várias características para uma linha como: largura da linha, estilo do traço, suavização, etc. Existem vários modos de definir essas propriedades, sendo eles:
@@ -155,7 +155,7 @@ plt.plot(t2, np.cos(2*np.pi*t2), 'r--')
 plt.show()
 ```
 
-<img scr="grafico 7.png" alt="grafico 7" title="pulmao" />
+![image](https://raw.githubusercontent.com/luisamaestrelli/matplotlib.github.io/main/grafico%207.png)
 
 O comando ``subplot`` especifica ``numrows``, ``numcols``, ``plot_number`` (variando de 1 até [numrows]x[numcols]). As vírgulas são opcionais no caso de [numrows]x[numcols] menores que 10.  Portanto, ``subplot (211)`` é idêntico à ``subplot (2, 1, 1)``.
 É possível que se crie um número arbitrário de subplot. Se você quiser posicionar os eixos manualmente, por exemplo uma grade não retangular, basta usar [`matplotlib.pyplot.axes`](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.axes.html#matplotlib.pyplot.axes), eles permite que o usuário especifique a posição dos eixos em ``axes([left, bottom, width, height])`` onde todos os valores são coordenadas fracionárias, variando de 0 a 1. É possível encontrar mais exemplos e detalhes em <a href="https://matplotlib.org/gallery/subplots_axes_and_figures/axes_demo.html">Axes Demo</a>.
@@ -202,7 +202,7 @@ plt.grid(True)
 plt.show()
 ```
 
-<img scr="grafico 8.png" alt="grafico 8" title="orelha" />
+![image](https://raw.githubusercontent.com/luisamaestrelli/matplotlib.github.io/main/grafico%208.png)
 
 ##### <a id="paragrafo9">Texto de anotação</a>
 O uso da função ``text`` coloca o texto em uma posição arbitrária. Um uso comum para texto é fazer anotações sobre alguma característica do gráfico, o método ``annotate`` facilita as anotações. Em uma anotação, há dois pontos a considerar: o lugar que está sendo anotado, representado pelo argumento ``xy`` e a localização do texto ``xytext``. Ambos os argumentos são tuplas ``(x, y)``.
