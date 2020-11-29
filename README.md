@@ -5,7 +5,7 @@
 É uma biblioteca com recursos para a geração de gráficos 2D a partir de um arranjo. São gráficos comuns que podem ser criados com comandos simples, inpirados nos comandos gráficos do <a href="https://www.mathworks.com/products/matlab.html">MATLAB</a>
   
 ### Como funciona
-O funcionamento do ```matplotlib``` pode ser explicado em 3 partes
+O funcionamento do ```matplotlib``` pode ser explicado em 3 partes:
 1. **pylab**: Conjunto de funções disponível em ```matplotlib.pylab``` que permite a geração de código similar ao MATLAB
 2. **frontend** ou **API**: conjunto de classes que realizam o trabalho de criar
     - figuras;
@@ -181,7 +181,7 @@ Todas as funções de ``text`` retornam uma instância de [`matplotlib.text.Text
 t = plt.xlabel('my data', fontsize=14, color='red')
 ```
 ##### Usando expressões matemáticas em texto
-O MatPlotLib aceita expressões em LaTex. O exemplo a seguir demonstra o σi=15 
+O MatPlotLib aceita expressões em LaTex. O exemplo a seguir demonstra o σ=15 
 ```
 beta, mu = 100, 15
 x = beta + mu * np.random.randn(10000)
@@ -200,6 +200,25 @@ plt.show()
 ```
 
 *imagem8*
+
+##### Annotating text
+O uso da função ``text`` coloca o texto em uma posição arbitrária. Um uso comum para texto é fazer anotações sobre alguma característica do gráfico, o método ``annotate`` facilita as anotações. Em uma anotação, há dois pontos a considerar: o lugar que está sendo anotado, representado pelo argumento ``xy`` e a localização do texto ``xytext``. Ambos os argumentos são tuplas ``(x, y)``.
+```
+ax = plt.subplot(111)
+
+t = np.arange(0.0, 10.0, 0.05)
+s = np.cos(0.5*np.pi*t)
+line, = plt.plot(t, s, 'm-.', lw=2)
+
+plt.annotate('máximo', xy=(4, 1), xytext=(4.5, 1.7),
+             arrowprops=dict(facecolor='blue', shrink=0.05, edgecolor='blue'),
+             )
+
+plt.ylim(-2, 2)
+plt.show()
+```
+Nesse exemplo mais simples, tanto o ``xy`` (a seta) quanto o ``xytext`` (o texto) estão em *data coordinates*, porém é possível escoher entre uma variedade de sistemas de coordenadas disponiveis no matplotlib, podem ser encontradas em <a href="https://matplotlib.org/tutorials/text/annotations.html#annotations-tutorial">Annotations</a>. 
+
 
 
 
