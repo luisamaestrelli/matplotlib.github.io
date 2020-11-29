@@ -39,13 +39,13 @@ plt.title("inicial")
 plt.show()
 ```
 
-*imagem1*
+<img scr="grafico 1.png" alt="grafico 1" title="Avatar" />
 
 ``plot`` é um método versátil, ele aceita vários números arbitrários como argumento, por exemplo o usuário quiser plotar x por y:
 ```
 plt.plot([2, 4, 6, 8], [2, 6, 9, 16])
 ```
-*imagem2*
+<img scr="grafico 2.png" alt="grafico 2" title="Flor" />
 
 <h6>Formatando o estilo do seu plot</h6>
 Para todo par de argumento, x e y, tem um terceiro argumento opcional do tipo string que indica o tipo e a cor da linha do plot. As letras e os símbolos da string são do MATLAB e você liga uma string de cor com uma string do tipo da linha. Como visto acima o formato de string default é ```b-``` que é uma linha azul sólida.
@@ -54,11 +54,11 @@ Exemplo: o mesmo plot com círculos amarelos
 plt.plot([2, 4, 6, 8], [2, 6, 9, 16], 'yo')
 ```
 
-*imagem3*
+<img  scr="grafico 3.png" alt="grafico 3" title title="coraçao" />
 
 A seguir estão as listas de estilos de linhas e os formatos de strings.
 
-*tabela*
+<img scr="tabela 1.png" alt="tabela 1" title="tabela" />
 
 Como listas são muito limitantes, geralmente é usado [`numpy`](https://numpy.org/) arrays. Na verdade todas as sequências são convertidas para ``numpy`` internamente. O exemplo a seguir mostra várias linhas com diferentes estilos um uma chamada de função usando arrays 
 ```
@@ -72,7 +72,7 @@ plt.plot(t, t, 'y-', t, t**2, 'b--', t, t**3, 'cs')
 plt.show()
 ```
 
-*imagem4*
+<img scr="grafico 4"  alt="grafico 4" title="chave" />
 
 #### <a id="paragrafo3">Plotando com strings de palavra-chave</a>
 Existem circunstâncias em que o formato do data possibilita o acesso a determinadas variáveis com strings. Por exemplo com [`numpy.recarray`](https://numpy.org/doc/stable/reference/generated/numpy.recarray.html#numpy.recarray) ou [`pandas.DataFrame`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame)
@@ -91,7 +91,7 @@ plt.ylabel('entrada b')
 plt.show()
 ```
 
-*imagem5*
+<img scr="grafcio 5.png" alt="grafico 5" title="copo" />
 
 #### <a id="paragrafo4">Plotando com variáveis categóricas</a>
 Também podemos criar um plot com variáveis categóricas, o ``matplotlib`` possibilita você passá-las diretamente para várias funções de plotagem.
@@ -111,7 +111,7 @@ plt.suptitle('Conhecendo PyPlot')
 plt.show()
 ```
 
-*imagem6*
+<img scr="grafico 6. png" alt="grafico 6" title="titulo" />
 
 ### <a id="paragrafo5">Controlando propriedades de linha</a>
 É possível atribuir várias características para uma linha como: largura da linha, estilo do traço, suavização, etc. Existem vários modos de definir essas propriedades, sendo eles:
@@ -155,7 +155,7 @@ plt.plot(t2, np.cos(2*np.pi*t2), 'r--')
 plt.show()
 ```
 
-*imagem7gráfico*
+<img scr="grafico 7.png" alt="grafico 7" title="pulmao" />
 
 O comando ``subplot`` especifica ``numrows``, ``numcols``, ``plot_number`` (variando de 1 até [numrows]x[numcols]). As vírgulas são opcionais no caso de [numrows]x[numcols] menores que 10.  Portanto, ``subplot (211)`` é idêntico à ``subplot (2, 1, 1)``.
 É possível que se crie um número arbitrário de subplot. Se você quiser posicionar os eixos manualmente, por exemplo uma grade não retangular, basta usar [`matplotlib.pyplot.axes`](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.axes.html#matplotlib.pyplot.axes), eles permite que o usuário especifique a posição dos eixos em ``axes([left, bottom, width, height])`` onde todos os valores são coordenadas fracionárias, variando de 0 a 1. É possível encontrar mais exemplos e detalhes em <a href="https://matplotlib.org/gallery/subplots_axes_and_figures/axes_demo.html">Axes Demo</a>.
@@ -202,7 +202,7 @@ plt.grid(True)
 plt.show()
 ```
 
-*imagem8*
+<img scr="grafico 8.png" alt="grafico 8" title="orelha" />
 
 ##### <a id="paragrafo9">Texto de anotação</a>
 O uso da função ``text`` coloca o texto em uma posição arbitrária. Um uso comum para texto é fazer anotações sobre alguma característica do gráfico, o método ``annotate`` facilita as anotações. Em uma anotação, há dois pontos a considerar: o lugar que está sendo anotado, representado pelo argumento ``xy`` e a localização do texto ``xytext``. Ambos os argumentos são tuplas ``(x, y)``.
