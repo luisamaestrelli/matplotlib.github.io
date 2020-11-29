@@ -45,7 +45,7 @@ plt.show()
 ```
 plt.plot([2, 4, 6, 8], [2, 6, 9, 16])
 ```
-<img scr="grafico 2.png" alt="grafico 2" title="Flor" />
+*imagem2*
 
 <h6>Formatando o estilo do seu plot</h6>
 Para todo par de argumento, x e y, tem um terceiro argumento opcional do tipo string que indica o tipo e a cor da linha do plot. As letras e os símbolos da string são do MATLAB e você liga uma string de cor com uma string do tipo da linha. Como visto acima o formato de string default é ```b-``` que é uma linha azul sólida.
