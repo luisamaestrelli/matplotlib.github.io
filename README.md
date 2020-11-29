@@ -71,7 +71,7 @@ plt.show()
 
 *imagem4*
 
-#### <p id="paragrafo3">Plotando com strings de palavra-chave</p>
+#### <aid="paragrafo3">Plotando com strings de palavra-chave</a>
 Existem circunstâncias em que o formato do data possibilita o acesso a determinadas variáveis com strings. Por exemplo com [`numpy.recarray`](https://numpy.org/doc/stable/reference/generated/numpy.recarray.html#numpy.recarray) ou [`pandas.DataFrame`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame)
 
 O ``matplotlib`` permite que você forneça o objeto com ``data`` como argumento key. Uma vez fornecido, é possível gerar plots com as strings correspondentes às variáveis.
