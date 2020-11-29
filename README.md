@@ -174,7 +174,7 @@ plt.title('Subplots e Figuras') # título da segunda figura
 ```
 
 #### Trabalhando com texto
-``text`` pode ser usado para adicionar texto em um lugar arbitrário e ``xlabel``, ``ylabel`` e ``title`` adicionam texto em uma determinada posição (consultar <a href="https://matplotlib.org/tutorials/text/text_intro.html">Texto em MatPlotLib plots</a>)
+``text`` pode ser usado para adicionar texto em um lugar arbitrário e ``xlabel``, ``ylabel`` e ``title`` adicionam texto em uma determinada posição (consultar <a href="https://matplotlib.org/tutorials/text/text_intro.html">Texto em MatPlotLib plots</a>).
 
 
 
