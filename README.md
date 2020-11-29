@@ -175,6 +175,13 @@ plt.title('Subplots e Figuras') # título da segunda figura
 
 #### Trabalhando com texto
 ``text`` pode ser usado para adicionar texto em um lugar arbitrário e ``xlabel``, ``ylabel`` e ``title`` adicionam texto em uma determinada posição (consultar <a href="https://matplotlib.org/tutorials/text/text_intro.html">Texto em MatPlotLib plots</a>).
+
+Todas as funções de ``text`` retornam uma instância de [`matplotlib.text.Text`](https://matplotlib.org/api/text_api.html#matplotlib.text.Text). Você pode customizar as propriedades colocando os argumentos kyewords dentro da função ``text`` ou usando ``setp``:
+```
+t = plt.xlabel('my data', fontsize=14, color='red')
+```
+##### Usando expressões matemáticas em texto
+O MatPlotLib aceita expressões em LaTex. O exemplo a seguir demonstra o σi=15 
 ```
 beta, mu = 100, 15
 x = beta + mu * np.random.randn(10000)
@@ -194,7 +201,15 @@ plt.show()
 
 *imagem8*
 
-Todas as funções de ``text`` retornam uma instância de ``matplotlib.text.Text`` 
+
+
+
+
+
+
+
+
+
 
 
 
