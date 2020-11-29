@@ -143,8 +143,8 @@ def f(t):
 t1 = np.arange(0.0, 5.0, 0.1)
 t2 = np.arange(0.0, 5.0, 0.02)
 
-plt.figure()
-plt.subplot(211)
+plt.figure()                                  # O comando figure é opcional porque o figure(1) seria criado por default
+plt.subplot(211)                              # O comando subplot(111) também seria criado por default se o usuário não especificar o número de eixos manualmente
 plt.plot(t1, f(t1), 'bo', t2, f(t2), 'k')
 
 plt.subplot(212)
@@ -154,7 +154,25 @@ plt.show()
 
 *imagem7gráfico*
 
+O comando ``subplot`` especifica ``numrows``, ``numcols``, ``plot_number`` (variando de 1 até numrowsxnumcols). As vírgulas são opcionais no caso de numrowsxnumcols menores que 10.  Portanto, ``subplot (211)`` é idêntico à ``subplot (2, 1, 1)``.
+É possível que se crie um número arbitrário de subplot. Se você quiser posicionar os eixos manualmente, por exemplo uma grade não retangular, basta usar [`matplotlib.pyplot.axes`](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.axes.html#matplotlib.pyplot.axes), eles permite que o usuário especifique a posição dos eixos em ``axes([left, bottom, width, height])`` onde todos os valores são coordenadas fracionárias, variando de 0 a 1. É possível encontrar mais exemplos e detalhes em [` Axes Demo`](https://matplotlib.org/gallery/subplots_axes_and_figures/axes_demo.html).
+É possível criar múltiplas figuras usando vários comandos ``figures`` com número crescentes. Cada figura pode conter qualquer quantidade de eixos e subplots, no código a seguir temos 2 figuras, onde a figura 1 tem dois subplots e a segunda apenas um.
+import matplotlib.pyplot as plt
+```
+plt.figure(1)                # primeira figura
+plt.plot([4, 5, 6], 'r-')    # cria um subplot(111) por default
 
+plt.figure(2)                # a segunda figura
+plt.subplot(121)             # o primeiro subplot na segunda figura
+plt.plot([1, 2, 3], 'g')
+plt.subplot(122)             # o segundo subplot na segunda figura
+plt.plot([4, 5, 6], 'g')
+
+plt.figure(2)                   # figura 2 atual
+plt.title('Subplots e Figuras') # título da segunda figura
+```
+
+#### Trabalhando com texto
 
 
 
