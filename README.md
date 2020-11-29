@@ -24,7 +24,7 @@ O funcionamento do ```matplotlib``` pode ser explicado em 3 partes:
 As funções disponíveis no pacote ```matplotlib.pyplot``` fazem com que o ``matplotlib`` funcione como o MATLAB, sua principal função é tornar visível um determinado conjunto de dados. Cada função do ``pyplot`` muda algo na figura como
    - <a href="#paragrafo3">Plotando com strings de palavra-chave</a>
    - <a href="#paragrafo4">Plotando com variáveis categóricas</a>
-   - Controlando propriedades de linha;
+   - <a href="#paragrafo5">Controlando propriedades de linha</a>
    - Trabalhando com várias figuras e eixos;
    - Trabalhando com texto;
       - Usando expressões matemáticas em texto;
@@ -110,7 +110,7 @@ plt.show()
 
 *imagem6*
 
-### Controlando propriedades de linha
+### <a id="paragrafo5">Controlando propriedades de linha</a>
 É possível atribuir várias características para uma linha como: largura da linha, estilo do traço, suavização, etc. Existem vários modos de definir essas propriedades, sendo eles:
   - Argumentos de keywords
   
