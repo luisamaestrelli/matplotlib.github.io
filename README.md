@@ -22,7 +22,7 @@ O funcionamento do ```matplotlib``` pode ser explicado em 3 partes:
 
 ### Pacote PyPlot
 As funções disponíveis no pacote ```matplotlib.pyplot``` fazem com que o ``matplotlib`` funcione como o MATLAB, sua principal função é tornar visível um determinado conjunto de dados. Cada função do ``pyplot`` muda algo na figura como
-   - Plotando com strings de palavra-chave;
+   - <a href="#paragrafo3">Plotando com strings de palavra-chave</a>
    - Plotando com variáveis categóricas;
    - Controlando propriedades de linha;
    - Trabalhando com várias figuras e eixos;
@@ -71,7 +71,7 @@ plt.show()
 
 *imagem4*
 
-#### Plotando com strings de palavra-chave
+#### <p id="paragrafo3">Plotando com strings de palavra-chave</p>
 Existem circunstâncias em que o formato do data possibilita o acesso a determinadas variáveis com strings. Por exemplo com [`numpy.recarray`](https://numpy.org/doc/stable/reference/generated/numpy.recarray.html#numpy.recarray) ou [`pandas.DataFrame`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame)
 
 O ``matplotlib`` permite que você forneça o objeto com ``data`` como argumento key. Uma vez fornecido, é possível gerar plots com as strings correspondentes às variáveis.
@@ -219,7 +219,9 @@ plt.show()
 ```
 Nesse exemplo mais simples, tanto o ``xy`` (a seta) quanto o ``xytext`` (o texto) estão em *data coordinates*, porém é possível escoher entre uma variedade de sistemas de coordenadas disponiveis no matplotlib, podem ser encontradas em <a href="https://matplotlib.org/tutorials/text/annotations.html#annotations-tutorial">Annotations</a>. 
 
+#### Eixos logarítmicos e outros eixos não lineares
 
+``matplotlib.pyplot`` 
 
 
 
