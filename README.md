@@ -132,8 +132,28 @@ plt.show()
           # or MATLAB style string value pairs
           plt.setp(lines, 'color', 'r', 'linewidth', 2.0)
           ``` 
-    
-    
+Todas as propriedades estão disponíveis no [`matplotlib.lines.Line2D`](https://matplotlib.org/api/_as_gen/matplotlib.lines.Line2D.html#matplotlib.lines.Line2D)
+
+#### Trabalhando com várias figuras e eixos
+O MATLAB e o ``pyplot``, possuem o conceito da figura atual e dos e dos eixos atuais, todas as suas funções de plotagem se aplicam aos eixos atuais. Com isso, abaixo está um script para a criação de dois subplots:
+```
+def f(t):
+    return np.exp(-t) * np.cos(2*np.pi*t)
+
+t1 = np.arange(0.0, 5.0, 0.1)
+t2 = np.arange(0.0, 5.0, 0.02)
+
+plt.figure()
+plt.subplot(211)
+plt.plot(t1, f(t1), 'bo', t2, f(t2), 'k')
+
+plt.subplot(212)
+plt.plot(t2, np.cos(2*np.pi*t2), 'r--')
+plt.show()
+```
+
+*imagem7gráfico*
+
 
 
 
