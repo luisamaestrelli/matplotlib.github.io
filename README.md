@@ -25,11 +25,11 @@ As funções disponíveis no pacote ```matplotlib.pyplot``` fazem com que o ``ma
    - <a href="#paragrafo3">Plotando com strings de palavra-chave</a>
    - <a href="#paragrafo4">Plotando com variáveis categóricas</a>
    - <a href="#paragrafo5">Controlando propriedades de linha</a>
-   - Trabalhando com várias figuras e eixos;
-   - Trabalhando com texto;
-      - Usando expressões matemáticas em texto;
-      - Anotando texto;
-   - Eixos logarítmicos e outros eixos não lineares.
+   - <a href="#paragrafo6">Trabalhando com várias figuras e eixos</a>
+   - <a href="#paragrafo7">Trabalhando com texto</a>
+      - <a href="#paragrafo8">Usando expressões matemáticas em texto</a>
+      - <a href="#paragrafo9">Anotando texto</a>
+   - <a href="#paragrafo10">Eixos logarítmicos e outros eixos não lineares</a>
     
 O ``pyplot`` já tem uma figura e uma área de desenho padrão, ou seja, que não precisa de uma definição prévia. Assim o código para gerar um gráfico pode ser apenas:
 ```
@@ -134,7 +134,7 @@ plt.show()
           
 Todas as propriedades estão disponíveis no [`matplotlib.lines.Line2D`](https://matplotlib.org/api/_as_gen/matplotlib.lines.Line2D.html#matplotlib.lines.Line2D)
 
-#### Trabalhando com várias figuras e eixos
+#### <a id="paragrafo6">Trabalhando com várias figuras e eixos</a>
 O MATLAB e o ``pyplot``, possuem o conceito da figura atual e dos e dos eixos atuais, todas as suas funções de plotagem se aplicam aos eixos atuais. Com isso, abaixo está um script para a criação de dois subplots:
 ```
 def f(t):
@@ -173,14 +173,14 @@ plt.figure(2)                   # figura 2 atual
 plt.title('Subplots e Figuras') # título da segunda figura
 ```
 
-#### Trabalhando com texto
+#### <a id="paragrafo7">Trabalhando com texto</a>
 ``text`` pode ser usado para adicionar texto em um lugar arbitrário e ``xlabel``, ``ylabel`` e ``title`` adicionam texto em uma determinada posição (consultar <a href="https://matplotlib.org/tutorials/text/text_intro.html">Texto em MatPlotLib plots</a>).
 
 Todas as funções de ``text`` retornam uma instância de [`matplotlib.text.Text`](https://matplotlib.org/api/text_api.html#matplotlib.text.Text). Você pode customizar as propriedades colocando os argumentos kyewords dentro da função ``text`` ou usando ``setp``:
 ```
 t = plt.xlabel('my data', fontsize=14, color='red')
 ```
-##### Usando expressões matemáticas em texto
+##### <a id="paragrafo8">Usando expressões matemáticas em texto</a>
 O MatPlotLib aceita expressões em LaTex. O exemplo a seguir demonstra o σ=15 
 ```
 beta, mu = 100, 15
@@ -201,7 +201,7 @@ plt.show()
 
 *imagem8*
 
-##### Annotating text
+##### <a id="paragrafo9">Texto de anotação</a>
 O uso da função ``text`` coloca o texto em uma posição arbitrária. Um uso comum para texto é fazer anotações sobre alguma característica do gráfico, o método ``annotate`` facilita as anotações. Em uma anotação, há dois pontos a considerar: o lugar que está sendo anotado, representado pelo argumento ``xy`` e a localização do texto ``xytext``. Ambos os argumentos são tuplas ``(x, y)``.
 ```
 ax = plt.subplot(111)
@@ -219,7 +219,7 @@ plt.show()
 ```
 Nesse exemplo mais simples, tanto o ``xy`` (a seta) quanto o ``xytext`` (o texto) estão em *data coordinates*, porém é possível escoher entre uma variedade de sistemas de coordenadas disponiveis no matplotlib, podem ser encontradas em <a href="https://matplotlib.org/tutorials/text/annotations.html#annotations-tutorial">Annotations</a>. 
 
-#### Eixos logarítmicos e outros eixos não lineares
+#### <a id="paragrafo10">Eixos logarítmicos e outros eixos não lineares</a>
 
 ``matplotlib.pyplot`` 
 
