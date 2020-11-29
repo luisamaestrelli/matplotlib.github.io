@@ -112,16 +112,16 @@ plt.show()
 
 ### Controlando propriedades de linha
 É possível atribuir várias características para uma linha como: largura da linha, estilo do traço, suavização, etc. Existem vários modos de definir essas propriedades, sendo eles:
-    - Argumentos de keywords
+      - Argumentos de keywords
     ```
     plt.plot(x, y, linewidth=2.0)
     ```
-    - Usar os métodos de definição de uma ``Line2D``. O ``plot`` retorna uma lista de ``Line2D`` objetos. 
+      - Usar os métodos de definição de uma ``Line2D``. O ``plot`` retorna uma lista de ``Line2D`` objetos. 
     ```
     line, = plt.plot(x, y, '-')
     line.set_antialiased(False) # turn off antialiasing
     ```
-    - Usar [`setp`](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.setp.html#matplotlib.pyplot.setp). O exemplo a seguir usa uma função estilo MATLAB que define várias propriedades em uma lista de linhas. O ``setp`` funciona ou com uma lista de objetos ou com um objeto único e você pode usar pares tanto de argumentos keywords do python como strings e valores do MATLAB
+      - Usar [`setp`](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.setp.html#matplotlib.pyplot.setp). O exemplo a seguir usa uma função estilo MATLAB que define várias propriedades em uma lista de linhas. O ``setp`` funciona ou com uma lista de objetos ou com um objeto único e você pode usar pares tanto de argumentos keywords do python como strings e valores do MATLAB
     ```
     lines = plt.plot(x1, y1, x2, y2)
     # use keyword args
