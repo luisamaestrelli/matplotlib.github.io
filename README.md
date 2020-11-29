@@ -23,7 +23,7 @@ O funcionamento do ```matplotlib``` pode ser explicado em 3 partes:
 ### Pacote PyPlot
 As funções disponíveis no pacote ```matplotlib.pyplot``` fazem com que o ``matplotlib`` funcione como o MATLAB, sua principal função é tornar visível um determinado conjunto de dados. Cada função do ``pyplot`` muda algo na figura como
    - <a href="#paragrafo3">Plotando com strings de palavra-chave</a>
-   - Plotando com variáveis categóricas;
+   - <a href="#paragrafo4">Plotando com variáveis categóricas</a>
    - Controlando propriedades de linha;
    - Trabalhando com várias figuras e eixos;
    - Trabalhando com texto;
@@ -90,7 +90,7 @@ plt.show()
 
 *imagem5*
 
-#### Plotando com variáveis categóricas
+#### <a id="paragrafo4">Plotando com variáveis categóricas</a>
 Também podemos criar um plot com variáveis categóricas, o ``matplotlib`` possibilita você passá-las diretamente para várias funções de plotagem.
 ```
 nomes = ['amostra1', 'amostra2', 'amostra3']
