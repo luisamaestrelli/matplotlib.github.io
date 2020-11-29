@@ -7,21 +7,21 @@
 ### Como funciona
 O funcionamento do ```matplotlib``` pode ser explicado em 3 partes:
 1. **pylab**: Conjunto de funções disponível em ```matplotlib.pylab``` que permite a geração de código similar ao MATLAB
-2. **frontend** ou **API**: conjunto de classes que realizam o trabalho de criar
+2. **frontend** ou **API**: conjunto de classes que realizam o trabalho de criar:
     - figuras;
     - textos;
     - linhas.
-3. **backends**: É um conjunto de funções que dependem do dispositivo de saída (display) como
+3. **backends**: É um conjunto de funções que dependem do dispositivo de saída (display) como:
     - ```PS```: Para gráficos em PostScript;
     - ```SVG```: Gera gráficos em Scalable Vector Graphics;
     - ````Agg````: Cria figuras no formato PNG;
     - ````GTK````: Permite que os gráficos sejam incluídos em aplicações ``GTK+``, e assim para ``PDF``, ``WxWidgets``, ``Tkinter``, etc.  
     
 ### Instalação
- Para usar o ``matplotlib`` é recomendado o uso da <a href="https://www.anaconda.com/">Anaconda</a> e do <a href="https://www.activestate.com/products/python/downloads/">ActiveState</a> que funcionam para Windows, macOS e plataformas Linux. Ambos são distribuidores que incluem o ``matplotlib`` e várias outras ferramentas. Para mais informações e um passo a passo mais detalhados visitar o <a href="https://matplotlib.org/users/installing.html">Installation Guide</a>
+ Para usar o ``matplotlib`` é recomendado o uso da <a href="https://www.anaconda.com/">Anaconda</a> e do <a href="https://www.activestate.com/products/python/downloads/">ActiveState</a> que funcionam para Windows, macOS e plataformas Linux. Ambos são distribuidores que incluem o ``matplotlib`` e várias outras ferramentas. Para mais informações e um passo a passo mais detalhado visitar o <a href="https://matplotlib.org/users/installing.html">Installation Guide</a>
 
 ### Pacote PyPlot
-As funções disponíveis no pacote ```matplotlib.pyplot``` fazem com que o ``matplotlib`` funcione como o MATLAB, sua principal função é tornar visível um determinado conjunto de dados. Cada função do ``pyplot`` muda algo na figura como
+As funções disponíveis no pacote ```matplotlib.pyplot``` fazem com que o ``matplotlib`` funcione como o MATLAB, sua principal função é tornar visível um determinado conjunto de dados. Cada função do ``pyplot`` muda algo na figura como:
    - <a href="#paragrafo3">Plotando com strings de palavra-chave</a>
    - <a href="#paragrafo4">Plotando com variáveis categóricas</a>
    - <a href="#paragrafo5">Controlando propriedades de linha</a>
@@ -31,7 +31,7 @@ As funções disponíveis no pacote ```matplotlib.pyplot``` fazem com que o ``ma
       - <a href="#paragrafo9">Anotando texto</a>
    - <a href="#paragrafo10">Eixos logarítmicos e outros eixos não lineares</a>
     
-O ``pyplot`` já tem uma figura e uma área de desenho padrão, ou seja, que não precisa de uma definição prévia. Assim o código para gerar um gráfico pode ser apenas:
+O ``pyplot`` já tem uma figura e uma área de desenho padrão, ou seja, não precisa de uma definição prévia. Assim o código para gerar um gráfico pode ser apenas:
 ```
 import matplotlib.pyplot as plt
 plt.plot( [11,3,2,5,7,9] ) #Se você fornece apenas uma lista ou arranjo para o plot, o matplotlib assume que é uma sequência de valores de y e automaticamente gera valores de x 
@@ -56,6 +56,9 @@ plt.plot([2, 4, 6, 8], [2, 6, 9, 16], 'yo')
 
 *imagem3*
 
+A seguir estão as listas de estilos de linhas e os formatos de strings.
+
+*tabela*
 
 Como listas são muito limitantes, geralmente é usado [`numpy`](https://numpy.org/) arrays. Na verdade todas as sequências são convertidas para ``numpy`` internamente. O exemplo a seguir mostra várias linhas com diferentes estilos um uma chamada de função usando arrays 
 ```
@@ -74,7 +77,7 @@ plt.show()
 #### <a id="paragrafo3">Plotando com strings de palavra-chave</a>
 Existem circunstâncias em que o formato do data possibilita o acesso a determinadas variáveis com strings. Por exemplo com [`numpy.recarray`](https://numpy.org/doc/stable/reference/generated/numpy.recarray.html#numpy.recarray) ou [`pandas.DataFrame`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame)
 
-O ``matplotlib`` permite que você forneça o objeto com ``data`` como argumento key. Uma vez fornecido, é possível gerar plots com as strings correspondentes às variáveis.
+O ``matplotlib`` permite que você forneça o objeto com ``data`` como argumento keyword. Uma vez fornecido, é possível gerar plots com as strings correspondentes às variáveis.
 ```
 data = {'a': np.arange(60),
         'c': np.random.randint(0, 60, 60),
@@ -154,7 +157,7 @@ plt.show()
 
 *imagem7gráfico*
 
-O comando ``subplot`` especifica ``numrows``, ``numcols``, ``plot_number`` (variando de 1 até numrowsxnumcols). As vírgulas são opcionais no caso de numrowsxnumcols menores que 10.  Portanto, ``subplot (211)`` é idêntico à ``subplot (2, 1, 1)``.
+O comando ``subplot`` especifica ``numrows``, ``numcols``, ``plot_number`` (variando de 1 até [numrows]x[numcols]). As vírgulas são opcionais no caso de [numrows]x[numcols] menores que 10.  Portanto, ``subplot (211)`` é idêntico à ``subplot (2, 1, 1)``.
 É possível que se crie um número arbitrário de subplot. Se você quiser posicionar os eixos manualmente, por exemplo uma grade não retangular, basta usar [`matplotlib.pyplot.axes`](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.axes.html#matplotlib.pyplot.axes), eles permite que o usuário especifique a posição dos eixos em ``axes([left, bottom, width, height])`` onde todos os valores são coordenadas fracionárias, variando de 0 a 1. É possível encontrar mais exemplos e detalhes em <a href="https://matplotlib.org/gallery/subplots_axes_and_figures/axes_demo.html">Axes Demo</a>.
 
 É possível criar múltiplas figuras usando vários comandos ``figures`` com número crescentes. Cada figura pode conter qualquer quantidade de eixos e subplots, no código a seguir temos 2 figuras, onde a figura 1 tem dois subplots e a segunda apenas um.
@@ -176,7 +179,7 @@ plt.title('Subplots e Figuras') # título da segunda figura
 #### <a id="paragrafo7">Trabalhando com texto</a>
 ``text`` pode ser usado para adicionar texto em um lugar arbitrário e ``xlabel``, ``ylabel`` e ``title`` adicionam texto em uma determinada posição (consultar <a href="https://matplotlib.org/tutorials/text/text_intro.html">Texto em MatPlotLib plots</a>).
 
-Todas as funções de ``text`` retornam uma instância de [`matplotlib.text.Text`](https://matplotlib.org/api/text_api.html#matplotlib.text.Text). Você pode customizar as propriedades colocando os argumentos kyewords dentro da função ``text`` ou usando ``setp``:
+Todas as funções de ``text`` retornam uma instância de [`matplotlib.text.Text`](https://matplotlib.org/api/text_api.html#matplotlib.text.Text). Você pode customizar as propriedades colocando os argumentos keywords dentro da função ``text`` ou usando ``setp``:
 ```
 t = plt.xlabel('my data', fontsize=14, color='red')
 ```
@@ -217,7 +220,7 @@ plt.annotate('máximo', xy=(4, 1), xytext=(4.5, 1.7),
 plt.ylim(-2, 2)
 plt.show()
 ```
-Nesse exemplo mais simples, tanto o ``xy`` (a seta) quanto o ``xytext`` (o texto) estão em *data coordinates*, porém é possível escoher entre uma variedade de sistemas de coordenadas disponiveis no matplotlib, podem ser encontradas em <a href="https://matplotlib.org/tutorials/text/annotations.html#annotations-tutorial">Annotations</a>. 
+Nesse exemplo mais simples, tanto o ``xy`` (a seta) quanto o ``xytext`` (o texto) estão em *data coordinates*, porém é possível escoher entre uma variedade de sistemas de coordenadas disponíveis no matplotlib, podem ser encontradas em <a href="https://matplotlib.org/tutorials/text/annotations.html#annotations-tutorial">Annotations</a>. 
 
 #### <a id="paragrafo10">Eixos logarítmicos e outros eixos não lineares</a>
 
