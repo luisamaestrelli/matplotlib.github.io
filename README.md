@@ -39,24 +39,45 @@ plt.title("inicial")
 plt.show()
 ```
 
-*imagem*
+*imagem1*
 
 ``plot`` é um método versátil, ele aceita vários números arbitrários como argumento, por exemplo o usuário quiser plotar x por y:
 ```
 plt.plot([2, 4, 6, 8], [2, 6, 9, 16])
 ```
-*imagem*
+*imagem2*
 
-<h5>Formatando o estilo do seu plot</h5>
+<h6>Formatando o estilo do seu plot</h6>
 Para todo par de argumento, x e y, tem um terceiro argumento opcional do tipo string que indica o tipo e a cor da linha do plot. As letras e os símbolos da string são do MATLAB e você liga uma string de cor com uma string do tipo da linha. Como visto acima o formato de string default é ```b-``` que é uma linha azul sólida.
 Exemplo: o mesmo plot com círculos amarelos
 ```
 plt.plot([2, 4, 6, 8], [2, 6, 9, 16], 'yo')
 ```
 
-*imagem*
+*imagem3*
 
 
 Como listas são muito limitantes, geralmente é usado [`numpy`](https://numpy.org/) arrays. Na verdade todas as sequências são convertidas para ``numpy`` internamente. O exemplo a seguir mostra várias linhas com diferentes estilos um uma chamada de função usando arrays 
+```
+import numpy as np
+
+# tempo de intervalo iguais de 300 ms
+t = np.arange(0., 7., 0.3)
+
+# linha amarela, tracejado azul and quadrados cianos
+plt.plot(t, t, 'y-', t, t**2, 'b--', t, t**3, 'cs')
+plt.show()
+```
+
+*imagem4*
+
+#### Plotando com strings de palavra-chave
+Existem circunstâncias em que o formato do data possibilita o acesso a determinadas variáveis com strings. Por exemplo com [`numpy.recarray`](https://numpy.org/doc/stable/reference/generated/numpy.recarray.html#numpy.recarray) ou [`pandas.DataFrame`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame)
+
+Se você fornecer o
+
+
+
+
 
 
