@@ -175,8 +175,26 @@ plt.title('Subplots e Figuras') # título da segunda figura
 
 #### Trabalhando com texto
 ``text`` pode ser usado para adicionar texto em um lugar arbitrário e ``xlabel``, ``ylabel`` e ``title`` adicionam texto em uma determinada posição (consultar <a href="https://matplotlib.org/tutorials/text/text_intro.html">Texto em MatPlotLib plots</a>).
+```
+beta, mu = 100, 15
+x = beta + mu * np.random.randn(10000)
+
+# the histogram of the data
+n, bins, patches = plt.hist(x, 50, density=0.7, facecolor='c', alpha=0.75)
 
 
+plt.xlabel('exemplo1')
+plt.ylabel('exemplo2')
+plt.title('Plotando')
+plt.text(50, .022, r'$\beta=100,\ \mu=15$')
+plt.axis([40, 160, 0, 0.03])
+plt.grid(True)
+plt.show()
+```
+
+*imagem8*
+
+Todas as funções de ``text`` retornam uma intância de ``matplotlib.text.Text`` 
 
 
 
