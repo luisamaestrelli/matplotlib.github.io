@@ -64,7 +64,7 @@ import numpy as np
 # tempo de intervalo iguais de 300 ms
 t = np.arange(0., 7., 0.3)
 
-# linha amarela, tracejado azul and quadrados cianos
+# linha amarela, tracejado azul e quadrados cianos
 plt.plot(t, t, 'y-', t, t**2, 'b--', t, t**3, 'cs')
 plt.show()
 ```
@@ -74,7 +74,63 @@ plt.show()
 #### Plotando com strings de palavra-chave
 Existem circunstâncias em que o formato do data possibilita o acesso a determinadas variáveis com strings. Por exemplo com [`numpy.recarray`](https://numpy.org/doc/stable/reference/generated/numpy.recarray.html#numpy.recarray) ou [`pandas.DataFrame`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame)
 
-Se você fornecer o
+O ``matplotlib`` permite que você forneça o objeto com ``data`` como argumento key. Uma vez fornecido, é possível gerar plots com as strings correspondentes às variáveis.
+```
+data = {'a': np.arange(60),
+        'c': np.random.randint(0, 60, 60),
+        'd': np.random.randn(60)}
+data['b'] = data['a'] + 15 * np.random.randn(60)
+data['d'] = np.abs(data['d']) * 110
+
+plt.scatter('a', 'b', c='c', s='d', data=data)
+plt.xlabel('entrada a')
+plt.ylabel('entrada b')
+plt.show()
+```
+
+*imagem5*
+
+#### Plotando com variáveis categóricas
+Também podemos criar um plot com variáveis categóricas, o ``matplotlib`` possibilita você passá-las diretamente para várias funções de plotagem.
+```
+nomes = ['amostra1', 'amostra2', 'amostra3']
+valores = [35, 50, 200]
+
+plt.figure(figsize=(9, 3), facecolor='c')
+
+plt.subplot(131)
+plt.bar(nomes, valores)
+plt.subplot(132)
+plt.scatter(nomes, valores, c='r', edgecolors='r')
+plt.subplot(133)
+plt.plot(nomes, valores)
+plt.suptitle('Conhecendo PyPlot')
+plt.show()
+```
+
+*imagem6*
+
+### Controlando propriedades de linha
+É possível atribuir várias características para uma linha como: largura da linha, estilo do traço, suavização, etc. Existem vários modos de definir essas propriedades, sendo eles:
+    - Argumentos de keywords
+    ```
+    plt.plot(x, y, linewidth=2.0)
+    ```
+    - Usar os métodos de definição de uma ``Line2D``. O ``plot`` retorna uma lista de ``Line2D`` objetos. 
+    ```
+    line, = plt.plot(x, y, '-')
+    line.set_antialiased(False) # turn off antialiasing
+    ```
+    - Usar [`setp`](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.setp.html#matplotlib.pyplot.setp). O exemplo a seguir usa uma função estilo MATLAB que define várias propriedades em uma lista de linhas. O ``setp`` funciona ou com uma lista de objetos ou com um objeto único e você pode usar pares tanto de argumentos keywords do python como strings e valores do MATLAB
+    ```
+    lines = plt.plot(x1, y1, x2, y2)
+    # use keyword args
+    plt.setp(lines, color='r', linewidth=2.0)
+    # or MATLAB style string value pairs
+    plt.setp(lines, 'color', 'r', 'linewidth', 2.0)
+    ```
+    
+    
 
 
 
