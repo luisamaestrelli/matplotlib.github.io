@@ -138,7 +138,7 @@ plt.show()
 Todas as propriedades estão disponíveis no [`matplotlib.lines.Line2D`](https://matplotlib.org/api/_as_gen/matplotlib.lines.Line2D.html#matplotlib.lines.Line2D)
 
 #### <a id="paragrafo6">Trabalhando com várias figuras e eixos</a>
-O MATLAB e o ``pyplot``, possuem o conceito da figura atual e dos e dos eixos atuais, todas as suas funções de plotagem se aplicam aos eixos atuais. Com isso, abaixo está um script para a criação de dois subplots:
+O MATLAB e o ``pyplot``, possuem o conceito da figura atual e dos eixos atuais, todas as suas funções de plotagem se aplicam aos eixos atuais. Com isso, abaixo está um script para a criação de dois subplots:
 ```
 def f(t):
     return np.exp(-t) * np.cos(2*np.pi*t)
