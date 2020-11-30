@@ -184,7 +184,7 @@ Todas as funções de ``text`` retornam uma instância de [`matplotlib.text.Text
 t = plt.xlabel('my data', fontsize=14, color='red')
 ```
 ##### <a id="paragrafo8">Usando expressões matemáticas em texto</a>
-O MatPlotLib aceita expressões em LaTex. O exemplo a seguir demonstra o σ=15 
+O MatPlotLib aceita expressões em LaTex. O exemplo a seguir demonstra o σ=15 que está entre cifrões
 ```
 beta, mu = 100, 15
 x = beta + mu * np.random.randn(10000)
