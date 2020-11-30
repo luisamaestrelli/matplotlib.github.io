@@ -279,7 +279,7 @@ plt.subplots_adjust(top=1.5, bottom=0.1, left=0.10, right=0.95, hspace=0.25,
 plt.show()
 ```
 
-
+![image](https://raw.githubusercontent.com/luisamaestrelli/matplotlib.github.io/main/grafico%2010.png)
 
 
 
