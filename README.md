@@ -157,7 +157,7 @@ plt.show()
 
 ![image](https://raw.githubusercontent.com/luisamaestrelli/matplotlib.github.io/main/grafico%207.png)
 
-O comando ``subplot`` especifica ``numrows``, ``numcols``, ``plot_number`` (variando de 1 até [numrows]x[numcols]). As vírgulas são opcionais no caso de [numrows]x[numcols] menores que 10.  Portanto, ``subplot (211)`` é idêntico à ``subplot (2, 1, 1)``.
+O comando ``subplot`` especifica ``numrows``, ``numcols``, ``plot_number`` (variando de 1 até *numrows*x*numcols*). As vírgulas são opcionais no caso de *numrows*x*numcols* menores que 10.  Portanto, ``subplot (211)`` é idêntico à ``subplot (2, 1, 1)``.
 É possível que se crie um número arbitrário de subplot. Se você quiser posicionar os eixos manualmente, por exemplo uma grade não retangular, basta usar [`matplotlib.pyplot.axes`](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.axes.html#matplotlib.pyplot.axes), eles permite que o usuário especifique a posição dos eixos em ``axes([left, bottom, width, height])`` onde todos os valores são coordenadas fracionárias, variando de 0 a 1. É possível encontrar mais exemplos e detalhes em <a href="https://matplotlib.org/gallery/subplots_axes_and_figures/axes_demo.html">Axes Demo</a>.
 
 É possível criar múltiplas figuras usando vários comandos ``figures`` com número crescentes. Cada figura pode conter qualquer quantidade de eixos e subplots, no código a seguir temos 2 figuras, onde a figura 1 tem dois subplots e a segunda apenas um.
