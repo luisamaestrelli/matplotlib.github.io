@@ -220,11 +220,64 @@ plt.annotate('máximo', xy=(4, 1), xytext=(4.5, 1.7),
 plt.ylim(-2, 2)
 plt.show()
 ```
+
+
 Nesse exemplo mais simples, tanto o ``xy`` (a seta) quanto o ``xytext`` (o texto) estão em *data coordinates*, porém é possível escoher entre uma variedade de sistemas de coordenadas disponíveis no matplotlib, podem ser encontradas em <a href="https://matplotlib.org/tutorials/text/annotations.html#annotations-tutorial">Annotations</a>. 
 
 #### <a id="paragrafo10">Eixos logarítmicos e outros eixos não lineares</a>
 
-``matplotlib.pyplot`` 
+``matplotlib.pyplot`` suporta não apenas escala de eixos lineares, mas também logarítmico. Isso é comumente usado se os dados abrangem muitas ordens de magnitude. Alterar a escala de um eixo é fácil:
+```
+plt.xscale('log')
+```
+
+Um exemplo de quatro gráficos com os mesmos dados e escalas diferentes para o eixo y é mostrado abaixo.
+```
+# Fixando uma aleatoriedade
+np.random.seed(19680801)
+
+# criando um data no intervalo aberto de (0,1)
+y = np.random.normal(loc=0.5, scale=0.4, size=1000)
+y = y[(y > 0) & (y < 2)]
+y.sort()
+x = np.arange(len(y))
+
+# plot com vários escalas de eixos
+plt.figure()
+
+# linear
+plt.subplot(221)
+plt.plot(x, y, 'g--')
+plt.yscale('linear')
+plt.title('linear')
+plt.grid(True)
+
+# log
+plt.subplot(222)
+plt.plot(x, y, 'g-.')
+plt.yscale('log')
+plt.title('log')
+plt.grid(True)
+
+# symmetric log
+plt.subplot(223)
+plt.plot(x, y - y.mean(), 'g')
+plt.yscale('symlog', linthresh=0.01)
+plt.title('symlog')
+plt.grid(True)
+
+# logit
+plt.subplot(224)
+plt.plot(x, y, 'g:')
+plt.yscale('logit')
+plt.title('logit')
+plt.grid(True)
+# Ajustar o subplot layout
+plt.subplots_adjust(top=1.5, bottom=0.1, left=0.10, right=0.95, hspace=0.25,
+                    wspace=0.35)
+
+plt.show()
+```
 
 
 
