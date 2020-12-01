@@ -221,6 +221,7 @@ plt.ylim(-2, 2)
 plt.show()
 ```
 
+![image](https://raw.githubusercontent.com/luisamaestrelli/matplotlib.github.io/main/grafico%209.png)
 
 Nesse exemplo mais simples, tanto o ``xy`` (a seta) quanto o ``xytext`` (o texto) estão em *data coordinates*, porém é possível escoher entre uma variedade de sistemas de coordenadas disponíveis no matplotlib, podem ser encontradas em <a href="https://matplotlib.org/tutorials/text/annotations.html#annotations-tutorial">Annotations</a>. 
 
