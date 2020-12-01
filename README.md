@@ -54,11 +54,11 @@ Exemplo: o mesmo plot com círculos amarelos
 plt.plot([2, 4, 6, 8], [2, 6, 9, 16], 'yo')
 ```
 
-![image](https://github.com/luisamaestrelli/matplotlib.github.io/blob/main/grafico%203.png)
+![image](https://raw.githubusercontent.com/luisamaestrelli/matplotlib.github.io/main/grafico%203.png)
 
 A seguir estão as listas de estilos de linhas e os formatos de strings.
 
-![image](https://github.com/luisamaestrelli/matplotlib.github.io/blob/main/tabelas%201.png)
+![image](https://raw.githubusercontent.com/luisamaestrelli/matplotlib.github.io/main/tabelas%201.png)
 
 Como listas são muito limitantes, geralmente é usado [`numpy`](https://numpy.org/) arrays. Na verdade todas as sequências são convertidas para ``numpy`` internamente. O exemplo a seguir mostra várias linhas com diferentes estilos um uma chamada de função usando arrays 
 ```
@@ -71,7 +71,7 @@ t = np.arange(0., 7., 0.3)
 plt.plot(t, t, 'y-', t, t**2, 'b--', t, t**3, 'cs')
 plt.show()
 ```
-![image](https://github.com/luisamaestrelli/matplotlib.github.io/blob/main/grafico%204.png)
+![image](https://raw.githubusercontent.com/luisamaestrelli/matplotlib.github.io/main/grafico%204.png)
 
 
 #### <a id="paragrafo3">Plotando com strings de palavra-chave</a>
