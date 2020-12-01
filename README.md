@@ -54,7 +54,7 @@ Exemplo: o mesmo plot com círculos amarelos
 plt.plot([2, 4, 6, 8], [2, 6, 9, 16], 'yo')
 ```
 
-![image](https://raw.githubusercontent.com/luisamaestrelli/matplotlib.github.io/main/grafico%203.png)
+![image](https://raw.githubusercontent.com/luisamaestrelli/matplotlib.github.io/main/tabelas%201.png)
 
 A seguir estão as listas de estilos de linhas e os formatos de strings.
 
@@ -71,8 +71,8 @@ t = np.arange(0., 7., 0.3)
 plt.plot(t, t, 'y-', t, t**2, 'b--', t, t**3, 'cs')
 plt.show()
 ```
+![image](https://raw.githubusercontent.com/luisamaestrelli/matplotlib.github.io/main/grafico%204.png)
 
-![image](https://raw.githubusercontent.com/luisamaestrelli/matplotlib.github.io/main/tabelas%201.png)
 
 #### <a id="paragrafo3">Plotando com strings de palavra-chave</a>
 Existem circunstâncias em que o formato do data possibilita o acesso a determinadas variáveis com strings. Por exemplo com [`numpy.recarray`](https://numpy.org/doc/stable/reference/generated/numpy.recarray.html#numpy.recarray) ou [`pandas.DataFrame`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame)
